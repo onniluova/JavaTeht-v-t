@@ -1,5 +1,4 @@
 package src.Moduuli1;
-
 public class tehtava2 {
     public static void main(String[] args) {
         int rivi = 4;
