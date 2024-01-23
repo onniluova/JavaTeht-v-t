@@ -1,9 +1,9 @@
 package src.Moduuli1;
 
-public class tehtava4 {
+public class tehtava4_1 {
     private final String name;
 
-    public tehtava4(String name) {
+    public tehtava4_1(String name) {
         this.name = name;
     }
 
@@ -13,8 +13,8 @@ public class tehtava4 {
 
     public static void main(String[] args) {
         // Create an instance of the Cat class with a name
-        tehtava4 cat = new tehtava4("Whiskers");
-        tehtava4 cat2 = new tehtava4("Rex");
+        tehtava4_1 cat = new tehtava4_1("Whiskers");
+        tehtava4_1 cat2 = new tehtava4_1("Rex");
 
         // Call the meow method on the cat instance
         cat.meow();

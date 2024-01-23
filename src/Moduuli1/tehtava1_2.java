@@ -1,8 +1,8 @@
-package src.Moduuli2;
+package src.Moduuli1;
 
 import java.util.Scanner;
 
-public class tehtava1 {
+public class tehtava1_2 {
     public static void main(String[] args) {
         System.out.println("Anna lämpötila celsiusasteina:");
         Scanner skanneri = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package src;
+package src.Mooduli2.tehtava1;
 
 public class Television {
     int channel;

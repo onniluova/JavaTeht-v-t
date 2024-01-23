@@ -1,7 +1,7 @@
-package src.Moduuli3;
+package src.Moduuli1;
 import java.util.Random;
 import java.util.Scanner;
-public class tehtava4 {
+public class tehtava4_3 {
     public static void main(String[] args) {
         Random rand = new Random();
         int oikeat = 0;

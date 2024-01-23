@@ -1,6 +1,6 @@
-package src.Moduuli3;
+package src.Moduuli1;
 import java.util.Scanner;
-public class tehtava2 {
+public class tehtava2_3 {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
 

@@ -1,6 +1,6 @@
-package src.Moduuli2;
+package src.Moduuli1;
 import java.util.Scanner;
-public class tehtava3 {
+public class tehtava3_2 {
     public static void main(String[] args) {
         final double GRAMS_PER_LUOTI = 13.28;
         final int LUOTI_PER_NAULA = 32;
