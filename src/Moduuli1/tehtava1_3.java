@@ -1,36 +1,22 @@
 package src.Moduuli1;
 import java.util.Scanner;
 public class tehtava1_3 {
-    ///ax^2 + bx + c = 0
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Syötä numero: ");
-        double a = lukija.nextDouble();
+        System.out.println("Give the first number:");
+        int first = Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Syötä numero: ");
-        double b = lukija.nextDouble();
+        System.out.println("Give the second number:");
+        int second = Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Syötä numero: ");
-        double c = lukija.nextDouble();
+        System.out.println("Give the third number:");
+        int third = Integer.parseInt(scanner.nextLine());
 
-        lukija.close();
+        float keskiarvo = (float)(first + second + third) / 3;
 
-        double diskriminantti = ((b * b) - 4 * a * c);
+        int tulo = first * second * third;
 
-        if (diskriminantti > 0) {
-            double juuri1 = (-b + Math.sqrt(diskriminantti) / 2 * a);
-            double juuri2 = (b + Math.sqrt(diskriminantti) / 2 * a);
-            System.out.print("Juuret: " + juuri1 + " " + juuri2);
-        }
-
-        else if (diskriminantti == 0){
-            double juuri = -b / (2 * a);
-            System.out.print("Juuri: " + juuri);
-        }
-
-        else {
-            System.out.print("Ei juuria.");
-        }
+        System.out.println("The sum of the numbers is " + (first + second + third + ", product is " + tulo + " and the average is " + keskiarvo + "."));
     }
 }

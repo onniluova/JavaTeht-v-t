@@ -1,25 +1,19 @@
 package src.Moduuli1;
-
+import java.util.Scanner;
 public class tehtava4_1 {
-    private final String name;
-
-    public tehtava4_1(String name) {
-        this.name = name;
-    }
-
-    public void meow() {
-        System.out.println("The cat named " + name + " says: Meow!");
-    }
-
     public static void main(String[] args) {
-        // Create an instance of the Cat class with a name
-        tehtava4_1 cat = new tehtava4_1("Whiskers");
-        tehtava4_1 cat2 = new tehtava4_1("Rex");
+        Scanner lukija = new Scanner(System.in);
 
-        // Call the meow method on the cat instance
-        cat.meow();
-        cat.meow();
-        cat2.meow();
-        cat.meow();
+        String[] firstNames = {"John", "Bob", "Alice"};
+        String[] lastNames = {"Smith", "Jones", "Williams"};
+
+        System.out.println("Kuinka monta nimeä haluat generoida?");
+
+        int nimiLuku = lukija.nextInt();
+
+        for (int i = nimiLuku; i > 0; i--) {
+            System.out.print(firstNames[(int) (Math.random() * firstNames.length)]);
+            System.out.print(" " + lastNames[(int) (Math.random() * lastNames.length)] + "\n");
+        }
     }
 }

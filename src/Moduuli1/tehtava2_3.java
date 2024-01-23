@@ -2,20 +2,26 @@ package src.Moduuli1;
 import java.util.Scanner;
 public class tehtava2_3 {
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
+        final double GRAMS_PER_LUOTI = 13.28;
+        final int LUOTI_PER_NAULA = 32;
+        final int NAULA_PER_LEIVISKA = 20;
 
-        System.out.print("Syötä binääriluku: ");
-        String binaariluvut = lukija.next();
+        Scanner scanner = new Scanner(System.in);
 
-        int desimaalinumero = 0;
+        System.out.print("Syötä paino grammoissa ");
+        double grams = scanner.nextDouble();
 
-        for(int i = 0; i < binaariluvut.length(); i++) {
-            if (binaariluvut.charAt(i) == '1') {
-                desimaalinumero += (int) Math.pow(2, binaariluvut.length() - 1 - i);
-            }
-        }
+        int totalLuoti = (int) (grams / GRAMS_PER_LUOTI);
+        int leiviskä = totalLuoti / (LUOTI_PER_NAULA * NAULA_PER_LEIVISKA);
+        float remainingLuoti = totalLuoti % (LUOTI_PER_NAULA * NAULA_PER_LEIVISKA);
+        float naula = remainingLuoti / LUOTI_PER_NAULA;
+        float luoti = remainingLuoti % LUOTI_PER_NAULA;
 
-        System.out.print("Desimaaliluku: " + desimaalinumero);
+        System.out.println("Painot ovat: ");
+        System.out.println(leiviskä + " leiviskää");
+        System.out.println(naula + " naulaa");
+        System.out.println(luoti + " luotia");
 
+        scanner.close();
     }
 }

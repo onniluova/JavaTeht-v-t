@@ -1,7 +1,7 @@
 package src.Moduuli1;
 import java.util.Scanner;
 
-public class tehtava2_4 {
+public class tehtava4_2 {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
         int size = lukija.nextInt();

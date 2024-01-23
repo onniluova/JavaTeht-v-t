@@ -1,34 +1,27 @@
 package src.Moduuli1;
-import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
-
 public class tehtava3_4 {
     public static void main(String[] args) {
+        Random rand = new Random();
+        int oikeat = 0;
         Scanner lukija = new Scanner(System.in);
 
-        ArrayList<Integer> numerot = new ArrayList<>();
+        while (oikeat < 10) {
+            int rand1 = rand.nextInt(11);
+            int rand2 = rand.nextInt(11);
+            System.out.println("Paljonko on " + rand1 + " kertaa " + rand2 + "?");
+            int vastaus = (rand1 * rand2);
+            int pvastaus = lukija.nextInt();
 
-        System.out.print("Syötä numeroita. (Syötä 0 lopettaaksesi)");
-
-        while(true) {
-            int numero = lukija.nextInt();
-            if (numero == 0) {
-                break;
+            if (pvastaus == vastaus) {
+                oikeat += 1;
+                System.out.println("Oikea vastaus! Sinulla on " + oikeat + " oikeaa vastausta!");
             }
-            numerot.add(numero);
-        }
-
-        ArrayList<Integer> uudetNumerot = new ArrayList<>();
-
-        for (Integer i : numerot) {
-            if (!uudetNumerot.contains(i)) {
-                uudetNumerot.add(i);
+            else {
+                System.out.println("Väärin!");
             }
         }
-
-        lukija.close();
-
-        System.out.print("Syötit: " + uudetNumerot);
-
+        System.out.println("Sait 10 oikein. Hienoa!");
     }
 }

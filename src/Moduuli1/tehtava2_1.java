@@ -1,16 +1,15 @@
 package src.Moduuli1;
+
+import java.util.Scanner;
+
 public class tehtava2_1 {
     public static void main(String[] args) {
-        int rivi = 4;
+        System.out.println("Anna lämpötila celsiusasteina:");
+        Scanner skanneri = new Scanner(System.in);
+        int celsius = skanneri.nextInt();
 
-        for (int i = 0; i < rivi; i++) {
-            for (int j = rivi - i; j > 1; j--) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j <= i * 2; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        double fahrenheit = (double)(celsius * 9 / 5) + 32;
+
+        System.out.println(celsius + " celciusta " + fahrenheit + " fahrenheittia.");
     }
 }
