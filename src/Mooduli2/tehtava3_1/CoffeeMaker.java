@@ -1,4 +1,4 @@
-package src.Mooduli2.tehtava3;
+package src.Mooduli2.tehtava3_1;
 import java.util.Scanner;
 public class CoffeeMaker {
     int coffeeType = 0;

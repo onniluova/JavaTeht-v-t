@@ -1,5 +1,5 @@
 
-package src.Mooduli2.tehtava4;
+package src.Mooduli2.tehtava4_1;
 
 public class Car {
     private float speed;

@@ -1,4 +1,4 @@
-package src.Mooduli2.tehtava1;
+package src.Mooduli2.tehtava1_1;
 public class TelevisionViewer {
     public static void main(String[] args) {
         Television myTV = new Television(1);
