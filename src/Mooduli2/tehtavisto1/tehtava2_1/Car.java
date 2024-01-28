@@ -1,4 +1,4 @@
-package src.Mooduli2.tehtava2;
+package src.Mooduli2.tehtavisto1.tehtava2_1;
 
 /* Define a class Car (convention capitalizes class names).
  * Car is public (as classes usually are, more on this later).
