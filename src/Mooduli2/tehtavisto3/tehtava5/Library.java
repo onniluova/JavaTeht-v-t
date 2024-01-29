@@ -74,7 +74,7 @@ public class Library {
                 return;
             }
         }
-        System.out.println("Book not found in the library.");
+        System.out.println("Kirjaa ei löytynyt.");
     }
 
     public void setReview(String title, String review) {
@@ -93,7 +93,7 @@ public class Library {
                 return;
             }
         }
-        System.out.println("Book not found in the library.");
+        System.out.println("Kirjaa ei löytynyt.");
     }
 
     public double getAverageBookRating() {
