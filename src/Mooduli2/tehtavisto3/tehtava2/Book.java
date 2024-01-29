@@ -1,4 +1,4 @@
-package src.Mooduli2.tehtavisto3;
+package src.Mooduli2.tehtavisto3.tehtava2;
 
 public class Book {
     private String title;

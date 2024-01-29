@@ -1,4 +1,4 @@
-package src.Mooduli2.tehtavisto3;
+package src.Mooduli2.tehtavisto3.tehtava2;
 
 public class LibraryMain {
     public static void main(String[] args) {
@@ -10,5 +10,7 @@ public class LibraryMain {
         library.addBook(book2);
         library.displayBooks();
         library.findBooksByAuthor("Kähkönen Sirpa");
+        library.borrowBook("Jakob");
+        library.returnBook(book);
     }
 }
