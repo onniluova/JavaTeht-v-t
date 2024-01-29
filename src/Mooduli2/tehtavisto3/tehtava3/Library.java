@@ -1,4 +1,4 @@
-package src.Mooduli2.tehtavisto3.tehtava2;
+package src.Mooduli2.tehtavisto3.tehtava3;
 
 import java.util.ArrayList;
 public class Library {
@@ -46,7 +46,15 @@ public class Library {
             System.out.println("Palautit kirjan " + book.getTitle());
         }
         else  {
-            System.out.println("Kirjaa ei voitu palauttaa.");
+            System.out.println("Kirjaa ei voitu palauttaa");
+        }
+    }
+
+    public void isBookAvailable(String title) {
+        for(Book book : books) {
+            if (book.getTitle().equals(title)) {
+                System.out.println("Kirja " + book.getTitle() + " löytyy kirjastosta.");
+            }
         }
     }
 }
