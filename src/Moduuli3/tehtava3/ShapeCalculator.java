@@ -1,7 +1,5 @@
 package src.Moduuli3.tehtava3;
 
-import java.sql.SQLOutput;
-
 public class ShapeCalculator {
     public static void main(String[] args) {
         Shape shape = new Shape();
