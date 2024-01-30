@@ -34,7 +34,5 @@ public class SportsCarTester {
         // Test 6: Turning off Cruise Control
         mcLaren.turnOffCruiseControl();
         System.out.println("Cruise Control is deactivated.");
-
-        // Add more tests as needed based on the functionalities of SportsCar class
     }
 }
