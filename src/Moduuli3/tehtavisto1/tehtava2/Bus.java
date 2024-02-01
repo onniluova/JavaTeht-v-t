@@ -1,4 +1,4 @@
-package src.Moduuli3.tehtava2;;
+package src.Moduuli3.tehtavisto1.tehtava2;;
 
 public class Bus {
     private float speed;

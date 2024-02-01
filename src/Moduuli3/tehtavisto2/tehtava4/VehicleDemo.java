@@ -8,16 +8,15 @@ public class VehicleDemo {
         ElectricCar electricCar = new ElectricCar();
         ElectricMotorcycle electricMotorcycle = new ElectricMotorcycle();
 
-
         electricCar.start();
         electricCar.charge();
         electricCar.getInfo();
-        System.out.println(electricCar.calculateFuelEfficiency() + " kWh/100km");
+        electricCar.calculateFuelEfficiency();
 
         motorcycle.start();
         motorcycle.getInfo();
         motorcycle.stop();
-        System.out.println(motorcycle.calculateFuelEfficiency() + " l/100km");
+        motorcycle.calculateFuelEfficiency();
 
         bus.start();
         bus.getInfo();

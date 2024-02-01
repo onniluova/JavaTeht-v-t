@@ -1,4 +1,4 @@
-package src.Moduuli3.tehtava3;
+package src.Moduuli3.tehtavisto1.tehtava3;
 
 public class Shape {
     int radius = 0;

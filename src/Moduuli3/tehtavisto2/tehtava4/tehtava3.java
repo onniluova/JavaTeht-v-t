@@ -6,7 +6,7 @@ interface Vehicle {
     void getInfo();
     void increaseSpeed();
     void lowerSpeed();
-    double calculateFuelEfficiency();
+    void calculateFuelEfficiency();
 }
 
 interface ElectricVehicle extends Vehicle {
@@ -62,8 +62,8 @@ abstract class AbstractVehicle implements Vehicle {
     }
 
     @Override
-    public double calculateFuelEfficiency() {
-        return fuelEfficiency;
+    public void calculateFuelEfficiency() {
+        System.out.println("Fuel efficiency " + fuelEfficiency);
     }
 }
 

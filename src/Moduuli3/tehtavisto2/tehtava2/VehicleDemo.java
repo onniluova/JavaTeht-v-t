@@ -9,6 +9,7 @@ public class VehicleDemo {
         car.start();
         car.getInfo();
         car.stop();
+        car.increaseSpeed();
 
         motorcycle.start();
         motorcycle.getInfo();

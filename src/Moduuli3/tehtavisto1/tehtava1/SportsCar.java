@@ -1,4 +1,4 @@
-package src.Moduuli3.tehtava1;
+package src.Moduuli3.tehtavisto1.tehtava1;
 
 public class SportsCar {
     private float speed;
