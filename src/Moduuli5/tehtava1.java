@@ -12,8 +12,8 @@ class evenThreading implements Runnable {
     public void run() {
         int number = lowest;
         while (number < highest) {
-            number += 2;
             System.out.println("Even thread: " + number);
+            number += 2;
         }
     }
 }
@@ -43,7 +43,7 @@ public class tehtava1 {
         Thread thread1 = new Thread(new evenThreading(1, 20));
         Thread thread2 = new Thread(new oddThreading(1, 20));
 
-        thread1.start(); // Starts the first thread
-        thread2.start(); // Starts the second thread
+        thread1.start();
+        thread2.start();
     }
 }
