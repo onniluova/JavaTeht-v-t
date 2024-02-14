@@ -3,8 +3,6 @@ package src.Moduuli5.tehtava2;
 public class tehtava2 {
     int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int numThreads = 4; // Muuta tätä arvoa säikeiden määrän muuttamiseksi
-
-    // Lasketaan kokonaisarvo jaettujen suuruus per säie
     int chunkSize = numbers.length / numThreads;
 
     // Luo säikeet
@@ -21,7 +19,7 @@ public class tehtava2 {
             threads[i].start();
         }
 
-        // Wait for all threads to finish
+        // Odotetaan thredit
         for (Thread thread : threads) {
             try {
                 thread.join();
@@ -30,7 +28,7 @@ public class tehtava2 {
             }
         }
 
-        // Calculate total sum
+        // Lasketaan summa
         int totalSum = 0;
         for (PartialSum partialSum : partialSums) {
             totalSum += partialSum.getSum();
