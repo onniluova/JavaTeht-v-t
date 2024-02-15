@@ -2,7 +2,7 @@ package src.Moduuli5.tehtava2;
 
 public class tehtava2 {
     int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int numThreads = 4; // Muuta tätä arvoa säikeiden määrän muuttamiseksi
+    int numThreads = 4;
     int chunkSize = numbers.length / numThreads;
 
     // Luo säikeet
@@ -19,7 +19,7 @@ public class tehtava2 {
             threads[i].start();
         }
 
-        // Odotetaan thredit
+        // Odotetaan threadit
         for (Thread thread : threads) {
             try {
                 thread.join();
