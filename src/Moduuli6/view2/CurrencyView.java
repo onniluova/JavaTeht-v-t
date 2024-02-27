@@ -1,27 +1,18 @@
 package src.Moduuli6.view2;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.event.EventHandler;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+import src.Moduuli6.controller2.CurrencyController;
+import src.Moduuli6.model2.Currency;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import org.w3c.dom.Text;
-import src.Moduuli6.controller2.CurrencyController;
-import src.Moduuli6.model.Dictionary;
-import src.Moduuli6.model2.Currency;
-import javafx.scene.layout.VBox;
-
-import java.awt.*;
 
 public class CurrencyView extends Application {
     private CurrencyController controller;
+
     @Override
     public void init() {
         // Initialize the DictionaryController with a new Dictionary
@@ -31,7 +22,7 @@ public class CurrencyView extends Application {
     public void start(Stage stage) {
         stage.setTitle("Currency Converter");
 
-        ComboBox<String> selectCurrency = new ComboBox<String>();
+        ComboBox<String> selectCurrency = new ComboBox<>();
         selectCurrency.getItems().addAll(
                 "EUR",
                 "USD",
@@ -39,23 +30,26 @@ public class CurrencyView extends Application {
         );
 
         Label text = new Label("Select currency to convert");
-        TextField currency = new TextField();
+        TextField currency = new TextField("Amount to convert");
         Button currencyConvert = new Button("Convert");
 
-        VBox vbox = new VBox(selectCurrency, text, currency, currencyConvert);
+        VBox vbox = new VBox(text, currency, selectCurrency);
         vbox.setAlignment(Pos.CENTER);
 
-        TextField convertedCurrency = new TextField();
+        VBox currencyVbox = new VBox(currencyConvert);
+        currencyVbox.setAlignment(Pos.CENTER);
+
+        TextField convertedCurrency = new TextField("Converted currency");
         Label convertedText = new Label("Converted currency");
 
-        ComboBox<String> selectToConvert = new ComboBox<String>();
+        ComboBox<String> selectToConvert = new ComboBox<>();
         selectToConvert.getItems().addAll(
                 "EUR",
                 "USD",
                 "GBP"
         );
 
-        VBox vbox2 = new VBox(selectToConvert, convertedText, convertedCurrency);
+        VBox vbox2 = new VBox(convertedText, convertedCurrency, selectToConvert);
         vbox2.setAlignment(Pos.CENTER);
 
         currencyConvert.setOnAction(event -> {
@@ -66,22 +60,22 @@ public class CurrencyView extends Application {
             convertedCurrency.setText(Double.toString(convertedAmount));
         });
 
-        //Lisätään FlowPanet main paneen.
-        FlowPane mainPane = new FlowPane();
-        mainPane.getChildren().add(vbox);
-        mainPane.getChildren().add(vbox2);
-
+        // Add a pane to contain the VBoxes and align them horizontally
+        HBox mainPane = new HBox(vbox, vbox2, currencyVbox);
         mainPane.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(mainPane);
 
-        stage.setScene(scene);
-        stage.setMinWidth(300);
-        stage.setMinHeight(200);
+        scene.getStylesheets().add("styles.css");
 
-        stage.setMaxWidth(800);
-        stage.setMaxHeight(600);
+        stage.setScene(scene);
+        stage.setMinWidth(600); // Adjusted width for better layout
+        stage.setMinHeight(300); // Adjusted height for better layout
 
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
