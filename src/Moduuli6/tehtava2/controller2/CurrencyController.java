@@ -1,7 +1,7 @@
-package src.Moduuli6.controller2;
+package src.Moduuli6.tehtava2.controller2;
 
-import src.Moduuli6.model2.Currency;
-import src.Moduuli6.view2.CurrencyView;
+import src.Moduuli6.tehtava2.model2.Currency;
+import src.Moduuli6.tehtava2.view2.CurrencyView;
 
 import java.util.ArrayList;
 

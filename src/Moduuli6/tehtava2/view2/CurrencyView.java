@@ -1,13 +1,12 @@
-package src.Moduuli6.view2;
+package src.Moduuli6.tehtava2.view2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import src.Moduuli6.controller2.CurrencyController;
-import src.Moduuli6.model2.Currency;
-import javafx.geometry.Insets;
+import src.Moduuli6.tehtava2.controller2.CurrencyController;
+import src.Moduuli6.tehtava2.model2.Currency;
 import javafx.geometry.Pos;
 
 public class CurrencyView extends Application {

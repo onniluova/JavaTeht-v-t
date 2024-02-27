@@ -1,4 +1,4 @@
-package src.Moduuli6.model2;
+package src.Moduuli6.tehtava2.model2;
 
 import java.util.ArrayList;
 
