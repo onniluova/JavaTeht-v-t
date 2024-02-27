@@ -14,7 +14,6 @@ public class CurrencyView extends Application {
 
     @Override
     public void init() {
-        // Initialize the DictionaryController with a new Dictionary
         controller = new CurrencyController(new Currency());
     }
 
@@ -59,7 +58,6 @@ public class CurrencyView extends Application {
             convertedCurrency.setText(Double.toString(convertedAmount));
         });
 
-        // Add a pane to contain the VBoxes and align them horizontally
         HBox mainPane = new HBox(vbox, vbox2, currencyVbox);
         mainPane.setAlignment(Pos.CENTER);
 
@@ -68,8 +66,8 @@ public class CurrencyView extends Application {
         scene.getStylesheets().add("styles.css");
 
         stage.setScene(scene);
-        stage.setMinWidth(600); // Adjusted width for better layout
-        stage.setMinHeight(300); // Adjusted height for better layout
+        stage.setMinWidth(600);
+        stage.setMinHeight(300);
 
         stage.show();
     }
